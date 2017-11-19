@@ -137,6 +137,15 @@ describe ActiveSupport::Cache::CascadeStore do
     end
   end
 
+  describe ".clear" do
+    it "clears all the cache stores" do
+      cache.write('foo', 'bar')
+      cache.clear
+
+      expect(cache.read('foo')).to be_nil
+    end
+  end
+
   describe "race condition protection" do
     let(:time) { Time.local(1984, 3, 18) }
 

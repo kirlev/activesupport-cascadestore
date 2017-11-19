@@ -60,6 +60,10 @@ module ActiveSupport
         nil
       end
 
+      def clear(options = nil)
+        cascade(:clear, options)
+      end
+
       protected
       def synchronize(&block) # :nodoc:
         @monitor.synchronize(&block)
