@@ -47,12 +47,12 @@ module ActiveSupport
 
       def increment(name, amount = 1, options = nil)
         nums = cascade(:increment, name, amount, options)
-        nums.detect {|n| !n.nil?}
+        nums.detect { |n| !n.nil? }
       end
 
       def decrement(name, amount = 1, options = nil)
         nums = cascade(:decrement, name, amount, options)
-        nums.detect {|n| !n.nil?}
+        nums.detect { |n| !n.nil? }
       end
 
       def delete_matched(matcher, options = nil)
@@ -60,8 +60,8 @@ module ActiveSupport
         nil
       end
 
-      def clear(options = nil)
-        cascade(:clear, options)
+      def clear
+        cascade(:clear)
       end
 
       protected
@@ -72,7 +72,11 @@ module ActiveSupport
       def cascade(method, *args) # :nodoc:
         synchronize do
           @stores.map do |store|
-            store.send(method, *args) rescue nil
+            if args.compact.blank?
+              store.send(method)
+            else
+              store.send(method, *args)
+            end
           end
         end
       end
