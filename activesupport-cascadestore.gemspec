@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "activesupport-cascadestore"
-  s.version     = "0.0.3"
+  s.version     = "0.0.4"
   s.authors     = ["Jerry Cheung"]
   s.email       = ["jollyjerry@gmail.com"]
   s.homepage    = "http://github.com/jch/activesupport-cascadestore"
