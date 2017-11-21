@@ -3,10 +3,10 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "activesupport-cascadestore"
-  s.version     = "0.0.4"
-  s.authors     = ["Jerry Cheung"]
-  s.email       = ["jollyjerry@gmail.com"]
-  s.homepage    = "http://github.com/jch/activesupport-cascadestore"
+  s.version     = "0.0.5"
+  s.authors     = ["Nir Levi"]
+  s.email       = ["kirlev@gmail.com"]
+  s.homepage    = "http://github.com/kirlev/activesupport-cascadestore"
   s.summary     = %q{write-through cache store that allows you to chain multiple cache stores together}
   s.description = %q{write-through cache store that allows you to chain multiple cache stores together}
 
