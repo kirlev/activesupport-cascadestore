@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "activesupport-cascadestore"
-  s.version     = "0.0.5"
+  s.version     = "0.0.6"
   s.authors     = ["Nir Levi"]
   s.email       = ["nir.levi@autodesk.com"]
   s.homepage    = "https://git.autodesk.com/BIM360/activesupport-cascadestore"
